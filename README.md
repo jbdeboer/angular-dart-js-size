@@ -15,7 +15,7 @@ For comparison, the AngularJS 1.2.0 rc3 binary is 36KB, minified and gzipped.
 To run
 ------
    * checkout Dart's standalone configuration into dart/standalone (TODO: make this a grunt task)
-   * run 'grunt buildDart:<rev>'
+   * run ```grunt buildDart:<rev>```
    * check reports/<rev> for the size of the output in bytes. 
 
 Help out
