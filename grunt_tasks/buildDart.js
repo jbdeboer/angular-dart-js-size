@@ -18,6 +18,9 @@ module.exports = function (grunt) {
   var cd_dart = 'cd dart/standalone && ';
   var cd_dart_dart = 'cd dart/standalone/dart && ';
 
+  addCmd('setup_dart_dir', 'if [ ! -d dart/ ]; then mkdir -p dart/standalone; cd dart; svn co http://src.chromium.org/svn/trunk/tools/depot_tools; fi');
+
+
   addCmd('sync_deps', '(' + cd_dart + gclient_path + ' config ' + deps_url + ')');
   addCmd('sync_dart', function(rev) {
     var revArg = rev ? ' --revision=' + rev : '';
