@@ -6,14 +6,11 @@
   "dependencies": {
     "chromedriver": "~2.3.0",
     "selenium-webdriver": "~2.37.0",
+    "svn-log-parser": "*",
     "grunt-shell": "~0.5.0",
     "q": "~0.9.7",
     "grunt": "~0.4.1",
-    "grunt-cli": "~0.1.9",
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "grunt-cli": "~0.1.9"
   },
   "repository": "",
   "author": "",

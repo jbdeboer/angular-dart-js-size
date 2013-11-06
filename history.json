@@ -1,0 +1,89 @@
+[
+    {
+        "versions": {
+            "dart": 28500
+        }
+    },
+    {
+        "versions": {
+            "dart": "28572"
+        },
+        "size": "187460"
+    },
+    {
+        "versions": {
+            "dart": "30107"
+        },
+        "size": "248732"
+    },
+    {
+        "versions": {
+            "dart": "29341",
+            "angular": "b5a358c24f0408046a23ef28f476d500ef5bcf42"
+        },
+        "size": "255996"
+    },
+    {
+        "versions": {
+            "dart": "29156",
+            "angular": "3058885231c56b15736dfd9bd44e5790237eac16"
+        },
+        "size": "253977"
+    },
+    {
+        "versions": {
+            "dart": "29156",
+            "angular": "3058885231c56b15736dfd9bd44e5790237eac16"
+        },
+        "size": "252224"
+    },
+    {
+        "versions": {
+            "dart": "29156",
+            "angular": "3058885231c56b15736dfd9bd44e5790237eac16"
+        },
+        "size": "177728"
+    },
+    {
+        "versions": {
+            "dart": "29156",
+            "angular": "0392b31c9f46eadb2e54d5d96f330a1824245b81"
+        },
+        "size": "178249"
+    },
+    {
+        "versions": {
+            "dart": "29341",
+            "angular": "0392b31c9f46eadb2e54d5d96f330a1824245b81"
+        },
+        "size": "179297"
+    },
+    {
+        "versions": {
+            "dart": "30036",
+            "angular": "0392b31c9f46eadb2e54d5d96f330a1824245b81"
+        },
+        "size": "175194"
+    },
+    {
+        "versions": {
+            "dart": "30107",
+            "angular": "0392b31c9f46eadb2e54d5d96f330a1824245b81"
+        },
+        "size": "175025"
+    },
+    {
+        "versions": {
+            "dart": "30036",
+            "angular": "928cdfdfd317cc8320a110c9c535f94674551d3b"
+        },
+        "size": "174516"
+    },
+    {
+        "versions": {
+            "dart": "30107",
+            "angular": "928cdfdfd317cc8320a110c9c535f94674551d3b"
+        },
+        "size": "174339"
+    }
+]

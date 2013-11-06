@@ -1,23 +1,25 @@
 module.exports = function (grunt) {
-  grunt.registerTask(
-    'buildAngular',
-    'Build Angular at a given SHA',
-    func);
+  var pub = '../dart_versions/current/dart --package-root=../dart_versions/current/packages/ ' +
+      '../dart_versions/current/sdk/lib/_internal/pub/bin/pub.dart';
 
-  return func;
+  grunt.addCmd('setup_angular_dir',
+      'if [ ! -d angular.dart/ ]; then ' +
+        'git clone https://github.com/angular/angular.dart.git; ' +
+      'fi');
 
-  function func () {
-    var q = require('q'),
-        path = require('path'),
-        deferred = q.defer(),
-        done = this.async ? this.async() : function() {};
+  grunt.addCmd('sync_angular', function(rev) {
+    return 'cd angular.dart && ' +
+        'git fetch --all && ' +
+        'git reset --hard ' + rev + ' && ' +
+        'echo "' + rev + '" >CURRENT_VERSION';
+  });
 
-    process.nextTick(function () {
-      grunt.log.warn('running task');
-      deferred.resolve();
-      done();
-    });
+  grunt.addCmd('build_angular',
+      'cd angular.dart && ' + pub + ' install');
 
-    return deferred.promise;
-  }
-}; 
+  grunt.registerAlias('build_angular', [
+    'shell:setup_angular_dir',
+    'shell:sync_angular',
+    'shell:build_angular'
+  ]);
+};

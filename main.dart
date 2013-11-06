@@ -9,6 +9,7 @@ import 'dart:html';
   'angular.directive',
   'angular.routing',
   'angular.core.parser',
+  'perf_api',
   'NodeTreeSanitizer'
   ],
   override: '*')
