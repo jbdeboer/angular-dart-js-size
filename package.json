@@ -6,6 +6,7 @@
   "dependencies": {
     "chromedriver": "~2.3.0",
     "selenium-webdriver": "~2.37.0",
+    "svn-log-parser": "*",
     "grunt-shell": "~0.5.0",
     "q": "~0.9.7",
     "grunt": "~0.4.1",

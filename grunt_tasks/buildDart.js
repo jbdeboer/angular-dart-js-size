@@ -42,10 +42,27 @@ module.exports = function (grunt) {
         'cp dart/standalone/dart/out/ReleaseX64/dart ' + r_dir + ' && ' +
         'cp -a dart/standalone/dart/sdk ' + r_dir;
   });
+  addCmd('pub_install', 'pub install');
   addCmd('dart2js', function(rev) {
     var r_dir = 'dart_versions/' + rev;
     return r_dir + '/dart ' + r_dir + '/sdk/lib/_internal/compiler/implementation/dart2js.dart --minify main.dart -o main.dart.js';
   });
+
+  grunt.registerTask(
+      'updateHistory',
+      'Updates the history file with the latest data',
+      function updateHistory(rev) {
+        var history = grunt.file.readJSON('history.json');
+        var lastSize = grunt.file.read('reports/' + rev).split('\n')[0];
+        history.push({
+          versions: {
+            dart: rev
+          },
+          size: lastSize
+        });
+        grunt.file.write('history.json', JSON.stringify(history, null, 4));
+      });
+
   addCmd('updateReport', function(rev) {
     var r_dir = 'dart_versions/' + rev;
     return 'gzip -f main.dart.js && ' +
@@ -59,8 +76,10 @@ module.exports = function (grunt) {
     'shell:sync_dart',
     'shell:build_dart',
     'shell:cp_build',
+    'shell:pub_install',
     'shell:dart2js',
     'testApp',
-    'shell:updateReport'
+    'shell:updateReport',
+    'updateHistory'
   ]);
 };

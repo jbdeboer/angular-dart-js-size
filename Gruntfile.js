@@ -16,6 +16,7 @@ module.exports = function (grunt) {
       require('./grunt_tasks/dart2js')(grunt);
       require('./grunt_tasks/testApp')(grunt);
       require('./grunt_tasks/updateReport')(grunt);
+      require('./grunt_tasks/collate')(grunt);
 
 
 }
