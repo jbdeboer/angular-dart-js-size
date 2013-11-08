@@ -2,8 +2,9 @@ name: dart2js-size-chart
 description: A history of the dart2js size of a tiny Angular.dart app.
 version: 0.0.1
 author: "James deBoer <james@huronbox.com>"
-homepage: https://github.com/jbdeboer/dart2js-size-chart
+homepage: https://github.com/jbdeboer/angular-dart-js-size
 
 dependencies:
-  angular: any
+  angular:
+    path: angular.dart
   browser: any

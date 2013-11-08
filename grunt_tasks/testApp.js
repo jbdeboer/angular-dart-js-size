@@ -10,7 +10,10 @@ module.exports = function (grunt) {
 
   return func;
 
-  function func () {
+  function func (opts) {
+    var noclose = opts == 'noclose';
+    var timeout = 1000;
+
     var q = require('q'),
         path = require('path'),
         deferred = q.defer(),
@@ -32,13 +35,16 @@ module.exports = function (grunt) {
         });
 
     driver.get('file://' + process.cwd() + '/index.html');
+    if (noclose) return;
+
 // Wait for Angular.dart to load...
     driver.wait(function() {
       return driver.getTitle().then(function(title) {
         console.log('Title: ' + title);
         return title.indexOf('{') == -1;
       });
-    }, 1000);
+    }, timeout);
+
 
     driver.findElement(webdriver.By.id('in')).sendKeys('webdriver ');
     driver.wait(function() {
@@ -46,7 +52,7 @@ module.exports = function (grunt) {
         console.log('Title: ' + title);
         return 'Hello webdriver' === title;
       });
-    }, 1000);
+    }, timeout);
 //.then(function() { console.log('happy wait')}, function() { console.log('sad wait')});
 
     cleanup().then(function() { done(); });
