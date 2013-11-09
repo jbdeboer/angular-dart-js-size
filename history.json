@@ -1,44 +1,6 @@
 [
     {
         "versions": {
-            "dart": 28500
-        }
-    },
-    {
-        "versions": {
-            "dart": "28572"
-        },
-        "size": "187460"
-    },
-    {
-        "versions": {
-            "dart": "30107"
-        },
-        "size": "248732"
-    },
-    {
-        "versions": {
-            "dart": "29341",
-            "angular": "b5a358c24f0408046a23ef28f476d500ef5bcf42"
-        },
-        "size": "255996"
-    },
-    {
-        "versions": {
-            "dart": "29156",
-            "angular": "3058885231c56b15736dfd9bd44e5790237eac16"
-        },
-        "size": "253977"
-    },
-    {
-        "versions": {
-            "dart": "29156",
-            "angular": "3058885231c56b15736dfd9bd44e5790237eac16"
-        },
-        "size": "252224"
-    },
-    {
-        "versions": {
             "dart": "29156",
             "angular": "3058885231c56b15736dfd9bd44e5790237eac16"
         },
