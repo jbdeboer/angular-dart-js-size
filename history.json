@@ -47,5 +47,12 @@
             "angular": "928cdfdfd317cc8320a110c9c535f94674551d3b"
         },
         "size": "174339"
+    },
+    {
+        "versions": {
+            "dart": "30798",
+            "angular": "058c8ee4017f45c46017c99d64fc192e6fab0137"
+        },
+        "size": "187315"
     }
 ]

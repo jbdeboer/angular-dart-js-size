@@ -8,15 +8,15 @@ The dart file fed into dart2js is here as main.dart.
 
 We compile it using ```dart2js --minify main.dart -o main.dart.js && gzip -9 main.dart.js```
 
-As of Dart 0.8.10 (r30107), that binary is 170KB minified and gzipped.
+As of Dart 1,0 (r30798), that binary is 182KB minified and gzipped.
 
 For comparison, the AngularJS 1.2.0 binary is 36KB, minified and gzipped.
 
 To run
 ------
    * checkout Dart's standalone configuration into dart/standalone (TODO: make this a grunt task)
-   * run ```grunt buildDart:<rev>```
-   * run ```grunt buildAngular:<rev>```
+   * run ```grunt build_dart:<rev>```
+   * run ```grunt build_angular:<rev>```
    * run ```grunt dart2js```
    * check history.json for the size of the output in bytes.
 
